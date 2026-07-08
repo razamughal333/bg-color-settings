@@ -1,58 +1,99 @@
 import { useState } from "react";
 
+const colorMap = {
+  purplehaiye: "#794ddf",
+};
+
 function App() {
   const [color, setColor] = useState("olive");
-
-  const colors = [
-    "red",
-    "green",
-    "blue",
-    "yellow",
-    "orange",
-    "purple",
-    "pink",
-    "black",
-    "teal",
-    "gray",
-  ];
-
   return (
     <div
-      className="w-full h-screen duration-500"
+      className="w-full h-screen duration-300"
       style={{ backgroundColor: color }}
     >
-      <div className="fixed bottom-10 inset-x-0 flex justify-center">
-        <div className="bg-white rounded-2xl shadow-xl px-6 py-5 flex flex-wrap justify-center gap-3 max-w-4xl">
-          {colors.map((item) => (
-            <button
-              key={item}
-              onClick={() => setColor(item)}
-              className="px-5 py-2 rounded-lg text-white font-semibold transition-transform hover:scale-105 active:scale-95"
-              style={{ backgroundColor: item }}
-            >
-              {item.charAt(0).toUpperCase() + item.slice(1)}
-            </button>
-          ))}
-        </div>
-      </div>
-
-      <div className="flex justify-center items-center h-full">
-        <div className="bg-white/80 backdrop-blur-md rounded-2xl shadow-2xl p-8 w-96 h-72  text-center mb-50">
-          <h1 className="text-4xl font-bold mb-4">🎨 Background Changer</h1>
-
-          <p className="text-lg text-gray-700 mb-2">Current Background Color</p>
-
-          <h2
-            className="text-3xl font-bold capitalize"
-            style={{ color: color }}
+      <div className="flex flex-wrap justify-center fixed bottom-12 inset-x-0 px-2">
+        <div className="flex flex-wrap justify-center gap-3 bg-white  px-3 py-2 rounded-2xl">
+          <button
+            onClick={() => {
+              setColor("red");
+            }}
+            className="outline-none px-4 rounded-2xl text-white font-bold"
+            style={{ backgroundColor: "red" }}
           >
-            {color}
-          </h2>
-
-          <div
-            className="w-28 h-28 rounded-full mx-auto mt-6 border-4 border-gray-300 shadow-lg"
-            style={{ backgroundColor: color }}
-          ></div>
+            red
+          </button>
+          <button
+            onClick={() => {
+              setColor("green");
+            }}
+            className="outline-none px-4 rounded-2xl text-white font-bold"
+            style={{ backgroundColor: "green" }}
+          >
+            green
+          </button>
+          <button
+            onClick={() => {
+              setColor("blue");
+            }}
+            className="outline-none px-4 rounded-2xl text-white font-bold"
+            style={{ backgroundColor: "blue" }}
+          >
+            blue
+          </button>
+          <button
+            onClick={() => {
+              setColor("black");
+            }}
+            className="outline-none px-4 rounded-2xl text-white font-bold"
+            style={{ backgroundColor: "black" }}
+          >
+            black
+          </button>
+          <button
+            onClick={() => {
+              setColor("olive");
+            }}
+            className="outline-none px-4 rounded-2xl text-white font-bold"
+            style={{ backgroundColor: "olive" }}
+          >
+            olive
+          </button>
+          <button
+            onClick={() => {
+              setColor("gold");
+            }}
+            className="outline-none px-4 rounded-2xl text-white font-bold"
+            style={{ backgroundColor: "gold" }}
+          >
+            gold
+          </button>
+          <button
+            onClick={() => {
+              setColor("orange");
+            }}
+            className="outline-none px-4 rounded-2xl text-white font-bold"
+            style={{ backgroundColor: "orange" }}
+          >
+            orange
+          </button>
+          <button
+            onClick={() => {
+              setColor("pink");
+            }}
+            className="outline-none px-4 rounded-2xl text-white font-bold"
+            style={{ backgroundColor: "pink" }}
+          >
+            pink
+          </button>
+          <button
+            onClick={() => {
+              setColor(colorMap.purplehaiye);
+            }}
+            className="outline-none px-4 rounded-2xl text-white font-bold"
+            style={{ backgroundColor: colorMap.purplehaiye }}
+          >
+            purplehaiye
+          </button>
         </div>
       </div>
     </div>

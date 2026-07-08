@@ -7,6 +7,5 @@ import Animation from "./Animation";
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <App />
-    <Animation />
   </StrictMode>,
 );
