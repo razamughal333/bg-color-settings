@@ -3,7 +3,14 @@ import { useState } from "react";
 function App() {
   const [color, setColor] = useState("olive");
 
-  return <></>;
+  return (
+    <>
+      <div
+        className="w-full h-screen duration-300"
+        style={{ backgroundColor: color }}
+      ></div>
+    </>
+  );
 }
 
 export default App;
