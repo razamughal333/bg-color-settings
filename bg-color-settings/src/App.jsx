@@ -37,7 +37,7 @@ function App() {
       </div>
 
       <div className="flex justify-center items-center h-full">
-        <div className="bg-white/80 backdrop-blur-md rounded-2xl shadow-2xl p-8 w-[350px] text-center">
+        <div className="bg-white/80 backdrop-blur-md rounded-2xl shadow-2xl p-8 w-96 h-72  text-center mb-50">
           <h1 className="text-4xl font-bold mb-4">🎨 Background Changer</h1>
 
           <p className="text-lg text-gray-700 mb-2">Current Background Color</p>
@@ -53,10 +53,6 @@ function App() {
             className="w-28 h-28 rounded-full mx-auto mt-6 border-4 border-gray-300 shadow-lg"
             style={{ backgroundColor: color }}
           ></div>
-
-          <p className="mt-6 text-gray-600">
-            Click any button below to instantly change the page background.
-          </p>
         </div>
       </div>
     </div>
